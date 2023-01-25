@@ -42,5 +42,7 @@ class DataUploader extends GetxController {
         "questions_count": paper.questions == null ? 0 : paper.questions!.length
       });
     }
+
+    await batch.commit();
   }
 }
