@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study_app/configs/themes/app_colors.dart';
+import 'package:flutter_study_app/screens/home/home_screen.dart';
 import 'package:flutter_study_app/widgets/app_circle_button.dart';
 import 'package:get/get.dart';
 
 class AppIntroductionScreen extends StatelessWidget {
   const AppIntroductionScreen({super.key});
+  static const String routeName = '/introduction';
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +37,12 @@ class AppIntroductionScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              AppCircleButton(
-                onTap: () => null,
+              TextButton(
+                onPressed: () => Get.offAndToNamed(HomeScreen.routeName),
                 child: const Icon(
                   Icons.arrow_forward,
                   size: 35,
+                  color: onSurfaceTextColor,
                 ),
               )
             ],
